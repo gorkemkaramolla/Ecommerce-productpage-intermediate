@@ -1,0 +1,56 @@
+.aligner{
+    margin: 0;
+    margin-top: 2em;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    .nav-parent{
+        font-family: "KumbhSans700";
+        font-size: 16px;
+        width: 100%;
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        .nav-list{
+        
+            display: flex;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            .nav-item:hover{
+                cursor: pointer;
+            }
+            .nav-item{
+                display:inline;
+                margin:0px 1em;
+            
+            }
+            .brand{
+                margin-right:30px;
+                margin-left: 0;
+            }
+            list-style-type:none;
+            .right-side{
+                display: flex;
+                align-items: center;
+                margin-right: 0;
+                margin-left: 350px;
+                gap: 10px;;
+                .nav-img-cart{
+                    width: 1.3em;
+                    height:1.3em;
+                }
+                .avatar{
+                    width: 45px;
+                    height: 45px;
+                }
+            }
+        }
+
+    }
+}
+
+
+
