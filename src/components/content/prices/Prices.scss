@@ -1,0 +1,33 @@
+.price-discount-amount{
+    display: flex;
+    gap: 20px;
+}
+.percent{
+    background-color: var(--LessOrange);
+    width: 25px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    border-radius: 2px;
+    padding: 2px 2px;
+
+
+}
+.discount{
+    text-decoration-line: line-through; 
+    color: var(GrayishBlue);
+    padding: 0;
+    margin-top: 0;
+    opacity: 0.5;;
+}
+.prices{
+
+    .price-discount-amount{
+        margin: 0;
+        padding: 0;
+        justify-content: flex-start;
+        display: flex;
+        align-items: center;
+    }
+}

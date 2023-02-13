@@ -1,0 +1,45 @@
+.content {
+    display: grid;
+    width: 1000px;
+    grid-template-columns: 50% 50%;
+    .grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      justify-content: center;      
+      .grid-2-container{
+        width: 400px;
+
+      }
+      .productShoe {
+        width: 450px;
+        border-radius: 1em;
+        height: 450px;
+        margin-bottom: 1.5em;
+      }
+    
+      .otherImagesGroup{
+        width: 450px;
+        display: flex;
+        justify-content: space-between;
+
+
+        .otherImage{
+          width:20%;
+          border-radius: 10px;
+          
+         }
+        .otherImage.active{
+          border: 3px solid var(--Orange);
+          opacity: 0.3;
+        }
+      
+     } 
+     .header{
+       color: var(--Black);
+       margin: 0;
+     }
+    }
+  
+  }

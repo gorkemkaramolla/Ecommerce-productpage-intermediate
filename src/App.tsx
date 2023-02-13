@@ -1,15 +1,14 @@
 import React from "react";
-import "./App.css";
+import "./App.scss";
+import Content from "./components/content/Content";
+import Attribution from "./components/attribution/Attribution";
+import Navbar from "./components/navbar/Navbar";
 function App() {
   return (
     <div className="App">
-      <div className="attribution">
-        Challenge by&nbsp;
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
-          Frontend Mentor
-        </a>
-        . Coded by <a href="#">&nbsp;Görkem Karamolla</a>.
-      </div>
+      {/* <Navbar /> */}
+      <Content />
+      <Attribution />
     </div>
   );
 }
