@@ -3,14 +3,17 @@ import "./App.scss";
 import Content from "./components/content/Content";
 import Attribution from "./components/attribution/Attribution";
 import Navbar from "./components/navbar/Navbar";
+import { CartContextProvider } from "./components/contexts/CartContext";
 function App() {
   return (
-    <div className="App">
-      <Navbar />
+    <CartContextProvider>
+      <div className="App">
+        <Navbar />
 
-      <Content />
-      <Attribution />
-    </div>
+        <Content />
+        <Attribution />
+      </div>
+    </CartContextProvider>
   );
 }
 

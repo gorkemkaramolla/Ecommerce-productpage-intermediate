@@ -1,6 +1,7 @@
-@import  "components/Attribution/Attribution.scss";
-@import  "components/content/Content.scss";
-hr{
+@import "components/Attribution/Attribution.scss";
+@import "components/content/Content.scss";
+
+hr {
   width: 100%;
   height: 1px;
   border: 0;
@@ -16,8 +17,8 @@ hr{
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  .Navbar{
-    @extend .Navbar
+  .Navbar {
+    @extend .Navbar;
   }
   .Content {
     @extend .Content;
@@ -26,22 +27,25 @@ hr{
     @extend .Attribution;
   }
 }
-body{
+body {
   margin: 0;
   padding: 0;
 }
-:root{
 
---Orange: hsl(26, 100%, 55%);
---LessOrange:hsl(26,79%,94%);
---PaleOrange: hsl(25, 100%, 94%);
---DarkGrayishBlue: hsl(219, 9%, 45%);
---VeryDarkBlue: hsl(220, 13%, 13%);
---LightGrayishBlue: hsl(223, 64%, 98%);
---GrayishBlue: hsl(220, 14%, 75%);
---White: hsl(0, 0%, 100%);
---Black : hsl(0, 0%, 0%)
-};
+* {
+  box-sizing: border-box;
+}
+:root {
+  --Orange: hsl(26, 100%, 55%);
+  --LessOrange: hsl(26, 79%, 94%);
+  --PaleOrange: hsl(25, 100%, 94%);
+  --DarkGrayishBlue: hsl(219, 9%, 45%);
+  --VeryDarkBlue: hsl(220, 13%, 13%);
+  --LightGrayishBlue: hsl(223, 64%, 98%);
+  --GrayishBlue: hsl(220, 14%, 75%);
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 0%);
+}
 @font-face {
   font-family: "KumbhSans700";
   src: url("../public/fonts/KumbhSans700.ttf");

@@ -1,56 +1,80 @@
-.aligner{
-    margin: 0;
-    margin-top: 2em;
-
+.aligner {
+  margin-top: 2em;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  .nav-parent {
+    font-family: "KumbhSans700";
+    font-size: 16px;
     display: flex;
+    align-items: baseline;
     justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    .nav-parent{
-        font-family: "KumbhSans700";
-        font-size: 16px;
-        width: 100%;
-        display: flex;
-        align-items: baseline;
-        justify-content: center;
-        .nav-list{
-        
-            display: flex;
-            align-items: center;
-            margin: 0;
-            padding: 0;
-            .nav-item:hover{
-                cursor: pointer;
-            }
-            .nav-item{
-                display:inline;
-                margin:0px 1em;
-            
-            }
-            .brand{
-                margin-right:30px;
-                margin-left: 0;
-            }
-            list-style-type:none;
-            .right-side{
-                display: flex;
-                align-items: center;
-                margin-right: 0;
-                margin-left: 350px;
-                gap: 10px;;
-                .nav-img-cart{
-                    width: 1.3em;
-                    height:1.3em;
-                }
-                .avatar{
-                    width: 45px;
-                    height: 45px;
-                }
-            }
+    .nav-list {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      .nav-item:hover {
+        cursor: pointer;
+      }
+      .nav-item {
+        margin: 0px 1em;
+        display: block;
+        a.nav-link {
+          text-decoration: none;
+          color: inherit;
+          padding: inherit;
+          margin: inherit;
+          display: block;
+
+          .activeLine {
+            border-bottom: 4px solid var(--Orange);
+            display: none;
+            position: relative;
+            top: 50px;
+          }
+
+          .activeLine.active {
+            display: block;
+          }
         }
+      }
 
+      .brand {
+        margin-right: 30px;
+        margin-left: 0;
+      }
+      list-style-type: none;
+      .right-side {
+        display: flex;
+        align-items: center;
+        margin-right: 0;
+        margin-left: 200px;
+        gap: 10px;
+        .nav-img-cart {
+          width: 1.3em;
+          height: 1.3em;
+        }
+        .cart-length {
+          background-color: var(--Orange);
+          padding: 1px 6px;
+          font-size: 8px;
+          color: var(--White);
+          bottom: 16px;
+          right: 12px;
+          position: relative;
+          border-radius: 100px;
+        }
+        .nav-img-cart.active {
+          filter: brightness(0%);
+        }
+        .avatar {
+          width: 45px;
+          height: 45px;
+        }
+      }
     }
+  }
 }
-
-
-

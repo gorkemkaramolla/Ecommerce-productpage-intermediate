@@ -1,0 +1,74 @@
+.cart-container {
+  width: 350px;
+  min-height: 180px;
+  position: absolute;
+  right: 80px;
+  top: 90px;
+  z-index: 10;
+  background-color: var(--White);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.23) 0px 30px 53px 4px;
+  background-color: rgb(255, 255, 255);
+  .header {
+    padding: 15px 20px;
+    margin-top: 10px;
+    color: var(--Black);
+    font-weight: 1000;
+    min-height: 10px;
+  }
+  .cart-items {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    align-items: flex-start;
+    width: 100%;
+    display: flex;
+    font-weight: bold;
+    flex-direction: column;
+    min-height: 180px;
+    font-family: "KumbhSans700";
+    .cart-item {
+      .cart-items-container {
+        display: flex;
+      }
+      .product-icon {
+        margin-right: 20px;
+      }
+      .product-informations {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        .product-name {
+        }
+      }
+      margin: 10px;
+      .price-holder {
+        font-weight: 400;
+        font-size: 16px;
+        display: flex;
+        flex-direction: row;
+        .total-price {
+          color: var(--Black);
+          font-weight: bold;
+        }
+      }
+      .trash-btn {
+        margin-left: 65px;
+      }
+    }
+  }
+  .checkout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--White);
+    font-weight: bold;
+    width: 90%;
+    background-color: var(--Orange);
+    border-radius: 10px;
+    padding: 15px 0px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+  }
+}

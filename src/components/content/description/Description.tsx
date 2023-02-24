@@ -5,7 +5,7 @@ type Props = {};
 const Description = (props: Props) => {
   return (
     <div className="description">
-      <h5 className="orange-header">SNAKER COMPANY</h5>
+      <h5 className="orange-header">SNEAKER COMPANY</h5>
       <h1 className="header">Fall Limited Edition Sneakers</h1>
       <p>
         These low-profile sneakers are your perfect casual wear companion.
