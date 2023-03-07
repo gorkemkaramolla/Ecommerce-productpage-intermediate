@@ -46,7 +46,7 @@ const Amount = (props: Props) => {
   };
 
   return (
-    <div>
+    <div className="cart-control">
       <div className="amount-buttons">
         <button className="decrease-button" onClick={() => changeAmount(-1)}>
           <img src="images/icon-minus.svg" alt="" />
@@ -58,7 +58,8 @@ const Amount = (props: Props) => {
         <button className="increase-button" onClick={() => changeAmount(1)}>
           <img src="images/icon-plus.svg" alt="" />
         </button>
-
+      </div>
+      <div className="add-card-container">
         <button className="add-card" onClick={addItemsToCart}>
           {/* <div className="img-cart"></div> */}
           <img className="img-cart" src="images/icon-cart.svg" alt="" />

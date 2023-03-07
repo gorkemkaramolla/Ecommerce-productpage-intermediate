@@ -10,59 +10,95 @@ const Navbar = (props: Props) => {
   let { products } = useCart();
   const [activeItem, setActiveItem] = useState<Number>(-1);
   const [cartActive, setCartActive] = useState<string>("");
+  const [profileActive, setProfileActive] = useState<string>("");
   const toggleCart = () => {
     cartActive === "" ? setCartActive("active") : setCartActive("");
   };
   useEffect(() => {}, [cartActive]);
+  const openSideMenu = () => {
+    document.querySelector(".side-menu")?.classList.add("active");
+  };
+  const closeSideMenu = () => {
+    document.querySelector(".side-menu")?.classList.remove("active");
+  };
+  const toggleProfile = () => {
+    if (cartActive) setCartActive("");
+    profileActive === "active"
+      ? setProfileActive("")
+      : setProfileActive("active");
+  };
   return (
     <div className="aligner">
       <div className="nav-parent">
         <ul className="nav-list">
-          <li className="nav-item brand">
-            <img src="images/logo.svg" alt="" />
-          </li>
-          {arry.map((item, i) => (
-            <li
-              key={i}
-              onClick={() => {
-                setActiveItem(i);
-              }}
-              className="nav-item"
-            >
-              <a
-                href="#"
-                className="nav-link"
-                style={activeItem === i ? { color: "var(--Black)" } : {}}
-              >
-                {item}
-                {i === activeItem ? (
-                  <div id="active-line" className={`activeLine active`}></div>
-                ) : (
-                  <div id="active-line" className={`activeLine }`}></div>
-                )}
-              </a>
+          <div className="left-side">
+            <div className="side-menu">
+              <div className="item" onClick={closeSideMenu}>
+                <img src="images/icon-close.svg" alt="" />
+              </div>
+              {arry.map((item, i) => (
+                <div key={i} className="item">
+                  {item}
+                </div>
+              ))}
+            </div>
+            <li className="burger-menu" onClick={openSideMenu}>
+              <img src="images/icon-menu.svg" alt="" />
             </li>
-          ))}
+            <li className="nav-item brand">
+              <img src="images/logo.svg" alt="" />
+            </li>
+            {arry.map((item, i) => (
+              <li
+                key={i}
+                onClick={() => {
+                  setActiveItem(i);
+                }}
+                className="nav-item nav-content"
+              >
+                <a
+                  href="#"
+                  className="nav-link"
+                  style={activeItem === i ? { color: "var(--Black)" } : {}}
+                >
+                  {item}
+                  {i === activeItem ? (
+                    <div id="active-line" className={`activeLine active`}></div>
+                  ) : (
+                    <div id="active-line" className={`activeLine }`}></div>
+                  )}
+                </a>
+              </li>
+            ))}
+          </div>
           <div className="right-side nav-item ">
             <div
               style={{
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "flex-end",
-                width: "300px",
+                justifyContent: "flex-start",
               }}
             >
-              <li className="nav-item" onClick={toggleCart}>
+              <li
+                className="nav-item"
+                style={{ margin: 0 }}
+                onClick={toggleCart}
+              >
                 <img
                   className={`nav-img-cart ${cartActive}`}
                   src="images/icon-cart.svg"
                   alt=""
                 />
+
                 <span className="cart-length">{products.length}</span>
               </li>
 
-              <li className="nav-item">
-                <img className="avatar" src="images/image-avatar.png" alt="" />
+              <li className="nav-item" onClick={toggleProfile}>
+                <img
+                  className={`avatar ${profileActive}`}
+                  src="images/image-avatar.png"
+                  alt=""
+                />
               </li>
             </div>
           </div>
@@ -70,14 +106,29 @@ const Navbar = (props: Props) => {
       </div>
 
       <hr
+        className="nav-hr"
         style={{
           alignSelf: "center",
           width: "100%",
-          margin: 36,
+          marginTop: "36px",
           marginBottom: "90px",
         }}
       />
-      {cartActive === "active" && <Cart></Cart>}
+      <div
+        style={{
+          width: "100%",
+          display: "flex",
+          alignItems: "flex-start",
+          justifyContent: "flex-end",
+          height: "0px",
+          backgroundColor: "red",
+          marginLeft: "100px",
+          padding: "0",
+          margin: "0",
+        }}
+      >
+        <div>{cartActive === "active" && <Cart></Cart>}</div>
+      </div>
     </div>
   );
 };

@@ -50,10 +50,7 @@ const Content = (props: Props) => {
       id={"content"}
       style={imageMode ? { gridTemplateColumns: "100%" } : {}}
     >
-      <div
-        className={"grid"}
-        style={!imageMode ? { marginRight: "100px" } : {}}
-      >
+      <div className={"grid"}>
         {imageMode && (
           <div className="prog-btn-holder">
             <button className="prog-btn close" onClick={imageModeClose}>

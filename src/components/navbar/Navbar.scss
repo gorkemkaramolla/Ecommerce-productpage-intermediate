@@ -1,32 +1,34 @@
 .aligner {
-  margin-top: 2em;
+  margin-top: 1em;
+  width: 75%;
+
   padding: 0;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
   .nav-parent {
     font-family: "KumbhSans700";
     font-size: 16px;
     display: flex;
+    width: 100%;
     align-items: baseline;
     justify-content: center;
+    margin-bottom: 10px;
+
     .nav-list {
+      width: 100vw;
       display: flex;
       align-items: center;
+      justify-content: space-between;
       margin: 0;
       padding: 0;
+
       .nav-item:hover {
         cursor: pointer;
       }
       .nav-item {
         margin: 0px 1em;
-        display: block;
         a.nav-link {
           text-decoration: none;
           color: inherit;
           padding: inherit;
-          margin: inherit;
           display: block;
 
           .activeLine {
@@ -47,11 +49,57 @@
         margin-left: 0;
       }
       list-style-type: none;
+      .left-side {
+        display: flex;
+
+        .side-menu {
+          position: absolute;
+          background-color: var(--White);
+          color: var(--Black);
+          z-index: 10;
+          width: 60%;
+          left: -100%;
+          display: block;
+          top: 0;
+          height: 100vh;
+
+          transition: all 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+          .item {
+            margin: 30px;
+            color: var(--DarkGrayishBlue);
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            font-weight: bold;
+            cursor: pointer;
+          }
+        }
+        .side-menu.active {
+          opacity: 1;
+          left: 0;
+          display: block;
+        }
+        .burger-menu {
+          display: none;
+        }
+        @media screen and (max-width: 800px) {
+          .burger-menu {
+            display: block;
+            cursor: pointer;
+            margin: 2px;
+            margin-left: 30px;
+            margin-right: 16px;
+          }
+          .nav-content {
+            display: none;
+          }
+        }
+      }
       .right-side {
         display: flex;
+
         align-items: center;
         margin-right: 0;
-        margin-left: 200px;
         gap: 10px;
         .nav-img-cart {
           width: 1.3em;
@@ -71,10 +119,25 @@
           filter: brightness(0%);
         }
         .avatar {
-          width: 45px;
-          height: 45px;
+          width: 35px;
+          height: 35px;
+        }
+        .avatar.active {
+          border: 2px solid var(--Orange);
+          margin: 2px;
+          border-radius: 50%;
         }
       }
     }
+  }
+  @media screen and (max-width: 800px) {
+    .nav-hr {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  .aligner {
+    width: 100%;
   }
 }
