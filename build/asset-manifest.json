@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1bee2a57.css",
+    "main.js": "/static/js/main.f97db510.js",
+    "static/media/KumbhSans400.ttf": "/static/media/KumbhSans400.5cef24cd08ae20611dd7.ttf",
+    "static/media/KumbhSans700.ttf": "/static/media/KumbhSans700.5cef24cd08ae20611dd7.ttf",
+    "index.html": "/index.html",
+    "main.1bee2a57.css.map": "/static/css/main.1bee2a57.css.map",
+    "main.f97db510.js.map": "/static/js/main.f97db510.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1bee2a57.css",
+    "static/js/main.f97db510.js"
+  ]
+}
