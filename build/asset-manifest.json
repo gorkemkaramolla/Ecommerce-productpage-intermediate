@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.1bee2a57.css",
-    "main.js": "/static/js/main.f97db510.js",
+    "main.css": "/static/css/main.2ef2f8d1.css",
+    "main.js": "/static/js/main.75a3fe0b.js",
     "static/media/KumbhSans400.ttf": "/static/media/KumbhSans400.5cef24cd08ae20611dd7.ttf",
     "static/media/KumbhSans700.ttf": "/static/media/KumbhSans700.5cef24cd08ae20611dd7.ttf",
     "index.html": "/index.html",
-    "main.1bee2a57.css.map": "/static/css/main.1bee2a57.css.map",
-    "main.f97db510.js.map": "/static/js/main.f97db510.js.map"
+    "main.2ef2f8d1.css.map": "/static/css/main.2ef2f8d1.css.map",
+    "main.75a3fe0b.js.map": "/static/js/main.75a3fe0b.js.map"
   },
   "entrypoints": [
-    "static/css/main.1bee2a57.css",
-    "static/js/main.f97db510.js"
+    "static/css/main.2ef2f8d1.css",
+    "static/js/main.75a3fe0b.js"
   ]
 }
