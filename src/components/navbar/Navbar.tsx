@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import "./Navbar.scss";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Cart from "../cart/Cart";
 import { useCart } from "../contexts/CartContext";
 type Props = {};
@@ -11,6 +11,7 @@ const Navbar = (props: Props) => {
   const [activeItem, setActiveItem] = useState<Number>(-1);
   const [cartActive, setCartActive] = useState<string>("");
   const [profileActive, setProfileActive] = useState<string>("");
+
   const toggleCart = () => {
     cartActive === "" ? setCartActive("active") : setCartActive("");
   };
@@ -20,6 +21,7 @@ const Navbar = (props: Props) => {
   };
   const closeSideMenu = () => {
     document.querySelector(".side-menu")?.classList.remove("active");
+    document.getElementById("content")?.classList.remove("disabled");
   };
   const toggleProfile = () => {
     if (cartActive) setCartActive("");
@@ -27,6 +29,7 @@ const Navbar = (props: Props) => {
       ? setProfileActive("")
       : setProfileActive("active");
   };
+
   return (
     <div className="aligner">
       <div className="nav-parent">
@@ -116,15 +119,12 @@ const Navbar = (props: Props) => {
       />
       <div
         style={{
-          width: "100%",
           display: "flex",
           alignItems: "flex-start",
           justifyContent: "flex-end",
           height: "0px",
           backgroundColor: "red",
           marginLeft: "100px",
-          padding: "0",
-          margin: "0",
         }}
       >
         <div>{cartActive === "active" && <Cart></Cart>}</div>

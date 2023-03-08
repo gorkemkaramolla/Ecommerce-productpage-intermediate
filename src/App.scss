@@ -7,6 +7,9 @@ hr {
   border: 0;
   background-color: #ccc;
 }
+.App.disabled {
+  background-color: #000000a8;
+}
 .App {
   font-family: "KumbhSans400";
   color: var(--DarkGrayishBlue);

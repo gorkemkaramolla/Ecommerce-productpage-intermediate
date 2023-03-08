@@ -1,12 +1,13 @@
 .cart-container {
   width: 350px;
+  height: 280px;
   display: flex;
-  align-items: center;
   flex-direction: column;
   min-height: 120px;
+  align-items: flex-end;
   position: relative;
   top: -120px;
-  left: 60px;
+  left: 80px;
   z-index: 10;
   background-color: var(--White);
   border-radius: 10px;
@@ -15,7 +16,9 @@
   .cart-header {
     align-self: flex-start;
     padding: 0;
-    margin: 0;
+    font-size: 20px;
+    margin: 20px;
+    width: 100%;
   }
   .header {
     padding: 15px 20px;
@@ -24,77 +27,115 @@
     font-weight: 1000;
     min-height: 10px;
   }
-  .cart-empty {
-  }
-  .cart-items {
-    list-style-type: none;
-    margin: 10px;
-    padding: 0;
-    align-items: flex-start;
-    width: 100%;
-    display: flex;
-    font-weight: bold;
-    flex-direction: column;
-    font-family: "KumbhSans700";
-    .cart-item {
-      width: 100%;
-
-      .cart-items-container {
-        display: flex;
-        justify-content: center;
-        width: 85%;
-      }
-      .product-icon {
-        margin-right: 15px;
-        border-radius: 5px;
-      }
-      .product-informations {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        .product-name {
-          font-weight: 500;
-        }
-      }
-      margin: 10px;
-      .price-holder {
-        font-weight: 400;
-        font-size: 16px;
-        display: flex;
-        flex-direction: row;
-        .total-price {
-          color: var(--Black);
-          font-weight: bold;
-        }
-      }
-    }
-    .trash-btn {
-      cursor: pointer;
-      position: relative;
-      left: 300px;
-      bottom: 30px;
-    }
-  }
-  .checkout {
-    cursor: pointer;
-    display: flex;
+  .cart-content {
     align-items: center;
+    display: flex;
+    margin: 0;
+    padding: 0%;
+    width: 100%;
     justify-content: center;
-    color: var(--White);
-    font-weight: bold;
-    width: 90%;
-    background-color: var(--Orange);
-    border-radius: 10px;
-    padding: 20px 0px;
-    font-size: 16px;
-    border: none;
-    margin-bottom: 30px;
-    outline: none;
+    flex-direction: column;
+    height: 100%;
+    .cart-empty {
+    }
+    .cart-items {
+      list-style-type: none;
+      margin: 10px;
+      padding: 0;
+      align-items: flex-start;
+      width: 100%;
+      display: flex;
+      font-weight: bold;
+      flex-direction: column;
+      font-family: "KumbhSans700";
+      .cart-item {
+        width: 100%;
+
+        .cart-items-container {
+          display: flex;
+          justify-content: center;
+          width: 85%;
+        }
+        .product-icon {
+          margin-right: 15px;
+          border-radius: 5px;
+        }
+        .product-informations {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          .product-name {
+            font-weight: 500;
+          }
+        }
+        margin: 10px;
+        .price-holder {
+          font-weight: 400;
+          font-size: 16px;
+          display: flex;
+          flex-direction: row;
+          .total-price {
+            color: var(--Black);
+            font-weight: bold;
+          }
+        }
+      }
+      .trash-btn {
+        cursor: pointer;
+        position: relative;
+        left: 300px;
+        bottom: 30px;
+      }
+    }
+    .checkout {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--White);
+      font-weight: bold;
+      width: 90%;
+      background-color: var(--Orange);
+      border-radius: 10px;
+      padding: 20px 0px;
+      font-size: 16px;
+      border: none;
+      margin-bottom: 30px;
+      outline: none;
+    }
   }
 }
-@media screen and (max-width: 768px) {
+
+@media screen and (max-width: 800px) {
   .cart-container {
-    top: 120px;
-    left: -50%;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media screen and (max-width: 400px) {
+  .cart-container {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media screen and (max-height: 700px) {
+  .cart-container {
+    top: 33%;
+  }
+}
+
+@media screen and (max-height: 900px) {
+  .cart-container {
+    top: 25%;
+  }
+}
+@media screen and (max-height: 800px) {
+  .cart-container {
+    top: 30%;
   }
 }
