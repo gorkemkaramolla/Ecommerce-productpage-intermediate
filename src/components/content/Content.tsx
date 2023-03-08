@@ -16,7 +16,9 @@ const Content = (props: Props) => {
     const handleWindowResize = () => {
       setWindowSize([window.innerWidth, window.innerHeight]);
     };
-
+    if (windowSize[0] < 501) {
+      setImageMode(false);
+    }
     window.addEventListener("resize", handleWindowResize);
 
     return () => {

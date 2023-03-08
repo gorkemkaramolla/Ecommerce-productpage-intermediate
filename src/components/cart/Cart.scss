@@ -109,7 +109,7 @@
 @media screen and (max-width: 800px) {
   .cart-container {
     position: absolute;
-    top: 25%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -117,25 +117,25 @@
 @media screen and (max-width: 400px) {
   .cart-container {
     position: absolute;
-    top: 30%;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media screen and (max-height: 700px) {
+  .cart-container {
+    position: absolute;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 }
 
-@media screen and (max-height: 700px) {
+@media screen and (min-height: 800px) {
   .cart-container {
-    top: 33%;
-  }
-}
-
-@media screen and (max-height: 900px) {
-  .cart-container {
-    top: 25%;
-  }
-}
-@media screen and (max-height: 800px) {
-  .cart-container {
-    top: 30%;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
